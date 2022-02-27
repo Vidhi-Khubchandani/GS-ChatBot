@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <title>ChatBot</title>
+  <head>
+    <link rel="stylesheet" href="/static/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="bg-image">
+    <center>
+
+        <img src="{{ url_for('static', filename='gs_logo.png') }}" style="width: 10%;margin-top: 10px;">
+
+  </center>
+        <center>
+      <h1>
+        GS ChatBot
+      </h1>
+    </center>
+    <div class="box"></div>
+    <div class="boxed">
+
+        <div id="chatbox">
+          <p class="botText">
+            <span>Hi! I'm ChatBot</span>
+          </p>
+        </div>
+        <div id="userInput">
+          <input style="text-align:center" class="input-device" id="textInput" type="text" name="msg" placeholder="Enter message here..." />
+        </div>
+
+
+
+    </div>
+      </div>
+     <script>
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+            $("#chatbox").append(botHtml);
+            document
+              .getElementById("userInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+          });
+        }
+        $("#textInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+      </script>
+  </body>
+</html>

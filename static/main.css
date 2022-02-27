@@ -1,0 +1,74 @@
+      body {
+        font-family: Elephant;
+      }
+      .bg-image {
+        background-image: url('./background_final.jpg');
+        background-size: cover;
+        z-index: -1;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        min-height:100vh
+      }
+      h1 {
+        color: black;
+        display: inline-block;
+        font-size: 2em;
+        margin: 0;
+        padding: 10px;
+      }
+      #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-top: 20px;
+      }
+      #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 60px;
+
+      }
+      .input-device{
+      padding:1rem;
+        border-radius:100%;
+      }
+      #textInput {
+        width: 80%;
+        border: none;
+
+        border-bottom: 6px solid black;
+        font-family: roboto;
+        font-size: 17px;
+
+      }
+      .userText {
+        color: black;
+        font-family: elephant;
+        font-size: 17px;
+        text-align: right;
+        line-height: 30px;
+      }
+      .userText span {
+        background-color: #F1D00A;
+        padding: 10px;
+        border-radius: 30px;
+      }
+      .botText {
+        color: white;
+        font-family: Elephant;
+        font-size: 17px;
+        text-align: left;
+        line-height: 30px;
+      }
+      .botText span {
+        background-color: #21325E;
+        padding: 10px;
+        border-radius: 30px;
+      }
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }

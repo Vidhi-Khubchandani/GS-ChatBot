@@ -1,0 +1,19 @@
+categories:
+- conversations
+conversations:
+- - Good evening!
+  - Good evening!
+- - Hello
+  - Hi! How are you
+- - I am good what about you
+  - I am also good
+- - Can you introduce yourself
+  - Hi, I am Chitti, the robot. I am here to help you with your queries. You can ask me anything
+- - I need help regarding finding workers nearby!
+  - Where do you live?
+- - Just Send me the statistics.
+  - Here are the workers in your area @workers.
+- - What services do you provide?
+  - Cleaning, Cooking, Gardener
+- - Can you help me with something more ?
+  - You can headover to the Home page.
