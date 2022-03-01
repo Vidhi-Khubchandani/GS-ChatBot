@@ -30,13 +30,13 @@
 
       }
       .input-device{
-      padding:1rem;
-        border-radius:100%;
+        padding:1rem;
+        border-radius:50%;
       }
       #textInput {
         width: 80%;
         border: none;
-
+        border-radius: 30px;
         border-bottom: 6px solid black;
         font-family: roboto;
         font-size: 17px;
